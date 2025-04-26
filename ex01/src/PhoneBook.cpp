@@ -1,1 +1,76 @@
-#include "Contact.hpp"
+#include "PhoneBook.hpp"
+#include <iostream>
+#include <iomanip>
+
+PhoneBook::PhoneBook() : count(0), oldest(0) {}
+
+void PhoneBook::addContact(const Contact& contact)
+{
+    if (count < 8)
+    {
+        contacts[count] = contact;
+        count++;
+    }
+    else
+    {
+        contacts[oldest] = contact;
+        oldest = (oldest + 1) % 8;
+    }
+}
+
+void PhoneBook::displayContactList() const
+{
+    std::cout << std::setw(10) << "Index" << "|";
+    std::cout << std::setw(10) << "First Name" << "|";
+    std::cout << std::setw(10) << "Last Name" << "|";
+    std::cout << std::setw(10) << "Nickname" << std::endl;
+
+    for (int i = 0; i < count; i++)
+    {
+        std::cout << std::setw(10) << i << "|";
+
+        std::string firstName = contacts[i].getFirstName();
+        if (firstName.length() > 10)
+            std::cout << std::setw(10) << firstName.substr(0, 9) + "." << "|";
+        else
+            std::cout << std::setw(10) << firstName << "|";
+        
+        std::string lastName = contacts[i].getLastName();
+        if (lastName.length() > 10)
+            std::cout << std::setw(10) << lastName.substr(0, 9) + "." << "|";
+        else
+            std::cout << std::setw(10) << lastName << "|";
+        
+        std::string nickname = contacts[i].getNickname();
+        if (nickname.length() > 10)
+            std::cout << std::setw(10) << nickname.substr(0, 9) + "." << "|";
+        else
+            std::cout << std::setw(10) << nickname << "|";
+    }
+}
+
+void PhoneBook::searchContact() const
+{
+    int index;
+
+    if (count == 0)
+    {
+        std::cout << "PhoneBook is empty!" << std::endl;
+        return;
+    }
+
+    displayContactList();
+
+    std::cout << "Enter the index of the contact you want to display: ";
+    std::cin >> index;
+
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        std::cout << "Invalid input!" << std::endl;
+        return;
+    }
+
+    displayContact(index);
+}
