@@ -2,12 +2,12 @@
 
 Contact::Contact() {}
 
-Contact::Contact( std::string firstName, std::string lastName, std::string phoneNumber, std::string darkestSecret) : firsName(firsName), lastName(lastName), nickname(nickname), phoneNumber(phoneNumber), darkestSecret(darkestSecret)
+Contact::Contact( std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret) : firstName(firstName), lastName(lastName), nickname(nickname), phoneNumber(phoneNumber), darkestSecret(darkestSecret)
 {}
 
 std::string Contact::getFirstName() const 
 {
-    return this->firsName;
+    return this->firstName;
 }
 
 std::string Contact::getLastName() const
@@ -32,5 +32,5 @@ std::string Contact::getDarkSecret() const
 
 bool Contact::isEmpty() const
 {
-    return firsName.empty();
+    return firstName.empty();
 }

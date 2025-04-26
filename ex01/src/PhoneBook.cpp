@@ -49,6 +49,23 @@ void PhoneBook::displayContactList() const
     }
 }
 
+
+void PhoneBook::displayContact(int index) const
+{
+    if (index < 0 || index >= count)
+    {
+        std::cout << "Invalid index!" << std::endl;
+        return;
+    }
+
+    std::cout << "First Name: " << contacts[index].getFirstName() << std::endl;
+    std::cout << "Last Name: " << contacts[index].getLastName();
+    std::cout << "Nickname: " << contacts[index].getNickname() << std::endl;
+    std::cout << "Phone Number: " << contacts[index].getPhoneNumber() << std::endl;
+    std::cout << "Darkest Secret: " << contacts[index].getDarkSecret() << std::endl;
+}
+
+
 void PhoneBook::searchContact() const
 {
     int index;
