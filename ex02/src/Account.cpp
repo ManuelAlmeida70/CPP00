@@ -6,7 +6,7 @@
 /*   By: maalmeid <maalmeid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:21:45 by maalmeid          #+#    #+#             */
-/*   Updated: 2025/04/28 13:16:38 by maalmeid         ###   ########.fr       */
+/*   Updated: 2025/04/28 14:18:44 by maalmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int Account::getTotalAmount(void)
     return _totalAmount;
 }
 
-int Account::getNbAccounts(void)
+int Account::getNbDeposits(void)
 {
     return _totalNbDeposits;
 }

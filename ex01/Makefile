@@ -36,7 +36,7 @@ clean:
 
 # Limpar tudo: objetos
 fclean: clean
-	rm -f $(NAME) $(LIB)
+	rm -f $(NAME)
 
 # Recompilar tudo
 re: fclean all
