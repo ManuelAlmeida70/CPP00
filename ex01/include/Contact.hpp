@@ -6,7 +6,7 @@
 /*   By: maalmeid <maalmeid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:07:31 by maalmeid          #+#    #+#             */
-/*   Updated: 2025/04/28 10:07:33 by maalmeid         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:33:09 by maalmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,7 @@ class Contact {
     public:
         Contact();
         Contact( std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret);
-
-        void setName( std::string );
-        void setLastName( std::string);
-        void setNickname( std::string);
-        void setPhoneNumber( std::string);
-        void setDarkSecret( std::string );
         
-
         std::string getFirstName() const;
         std::string getLastName() const;
         std::string getNickname() const;
