@@ -78,7 +78,7 @@ void PhoneBook::searchContact() const
 
     displayContactList();
 
-    std::cout << "Enter the index of the contact you want to display: ";
+    std::cout << "\nEnter the index of the contact you want to display: ";
     std::cin >> index;
 
     if (std::cin.fail())
