@@ -6,7 +6,7 @@
 /*   By: maalmeid <maalmeid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:21:45 by maalmeid          #+#    #+#             */
-/*   Updated: 2025/04/28 14:49:45 by maalmeid         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:34:20 by maalmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ void Account::displayAccountsInfos()
 
 void Account::_displayTimestamp(void)
 {
-    std::cout << "[19920104_091532] ";
-    /*
+    //std::cout << "[19920104_091532] ";
+    
     time_t now = time(NULL);
+    
     struct tm *tm_now = localtime(&now);
-
+    
     std::cout   << "["
                 << tm_now->tm_year + 1900
                 << std::setfill('0') << std::setw(2) << tm_now->tm_mon + 1
@@ -64,7 +65,7 @@ void Account::_displayTimestamp(void)
                 << std::setfill('0') << std::setw(2) << tm_now->tm_min
                 << std::setfill('0') << std::setw(2) << tm_now->tm_sec
                 << "] ";
-    */
+    
 }
 
 Account::Account(int initial_deposit) :
