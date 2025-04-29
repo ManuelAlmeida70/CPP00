@@ -6,7 +6,7 @@
 /*   By: maalmeid <maalmeid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:06:25 by maalmeid          #+#    #+#             */
-/*   Updated: 2025/04/28 10:06:30 by maalmeid         ###   ########.fr       */
+/*   Updated: 2025/04/29 10:53:50 by maalmeid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void PhoneBook::displayContactList() const
         if (nickname.length() > 10)
             std::cout << std::setw(10) << nickname.substr(0, 9) + "." << "|";
         else
-            std::cout << std::setw(10) << nickname << "|";
+            std::cout << std::setw(10) << nickname << std::endl;
     }
 }
 
@@ -71,7 +71,7 @@ void PhoneBook::displayContact(int index) const
     }
 
     std::cout << "First Name: " << contacts[index].getFirstName() << std::endl;
-    std::cout << "Last Name: " << contacts[index].getLastName();
+    std::cout << "Last Name: " << contacts[index].getLastName() << std::endl;
     std::cout << "Nickname: " << contacts[index].getNickname() << std::endl;
     std::cout << "Phone Number: " << contacts[index].getPhoneNumber() << std::endl;
     std::cout << "Darkest Secret: " << contacts[index].getDarkSecret() << std::endl;
